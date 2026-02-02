@@ -53,37 +53,60 @@
 // greet(print)
 
     
-console.log("starting homework...");
+// console.log("starting homework...");
 
-setTimeout(() => {
-    console.log("homework completed!");
-    console.log("starting dinner...");
-    setTimeout(() => {
-        console.log("dinner completed!");
-        console.log("getting ready to go out...");
-        setTimeout(() => {
-            console.log("going to playground!");
-        }, 1000); 
+// setTimeout(() => {
+//     console.log("homework completed!");
+//     console.log("starting dinner...");
+//     setTimeout(() => {
+//         console.log("dinner completed!");
+//         console.log("getting ready to go out...");
+//         setTimeout(() => {
+//             console.log("going to playground!");
+//         }, 1000); 
         
-    }, 1500);
+//     }, 1500);
 
-}, 2000);     
+// }, 2000);     
 
 
-function finishHomework(callback){
-    console.log("starting homework...");
+// function finishHomework(callback){
+//     console.log("starting homework...");
 
-    setTimeout(() => {
-        console.log("homework completed!");
-        callback();
-    }, 2000);
-}
+//     setTimeout(() => {
+//         console.log("homework completed!");
+//         callback();
+//     }, 2000);
+// }
 
-function eatdinner(callback){
-    console.log("starting dinner...");
-    setTimeout(() => {
-        console.log("dinner completed!");
-        callback();
-    }, 1500);
+// function eatdinner(callback){
+//     console.log("starting dinner...");
+//     setTimeout(() => {
+//         console.log("dinner completed!");
+//         callback();
+//     }, 1500);
 
-}
+// }
+
+
+const input =document.querySelector('#task')
+const btn = document.querySelector('.btn')
+const list = document.querySelector('.list')
+
+btn.addEventListener('click',(e)=>{
+    e.preventDefault()
+    if(input.value===""){
+        alert("please enter a task")
+        return
+    }
+    const li=document.createElement('li')
+    const deletebtn=document.createElement('button')
+    deletebtn.innerText='delete'
+    li.innerText=input.value
+    li.appendChild(deletebtn)
+    list.appendChild(li)
+    deletebtn.addEventListener('click',()=>{
+        list.removeChild(li)
+    })
+    input.value=""
+})
