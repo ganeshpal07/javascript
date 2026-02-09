@@ -111,80 +111,107 @@
 //     input.value=""
 // })
 
-const promise = new Promise(function(resolve, reject) {
-    setTimeout(() => {
-        resolve("promise fulfilled after 2 seconds");
-    }, 2000);
+// const promise = new Promise(function(resolve, reject) {
+//     setTimeout(() => {
+//         resolve("promise fulfilled after 2 seconds");
+//     }, 2000);
+// })
+
+// const p=new Promise(function(resolve, reject) {
+//     setTimeout(() => {
+//         let done = true;
+//         if (done) {
+//             resolve()
+//         }else{
+//             reject()}
+//         }, 5000)
+//     })
+//     console.log(p)
+
+
+// p.then(()=>{console.log("promise fulfiled sucessfully")
+// }).catch(()=>{console.log("promise rejected with an error")
+// })
+
+
+// p.then((data)=>{
+//     console.log("resolved data:", data)
+// }).catch((error)=>{
+//     console.log("error:", error)
+// }).finally(()=>{console.log  
+// ("promise is settled (either resolved or rejected)")
+// })  
+
+
+// function doHomework() {
+//     return new Promise(function(resolve, reject) {
+//         setTimeout(() => {
+//             if(done){
+//                 console.timeLog("homework completed")
+//                 resolve("homework completed")
+//             }else{
+//                 reject("homework not completed")
+//             }
+//         }, 5000);
+//     })
+//     return p
+// }
+
+
+// function doHomework() {
+//     return new Promise(function(resolve, reject) {
+//         setTimeout(() => {
+//             if(done){
+//                 console.timeLog("dinner completed")
+//                 resolve("dinner completed")
+//             }else{
+//                 reject("dinner not completed")
+//             }
+//         }, 5000);
+//     })
+//     return p
+// }
+
+
+// function goPlayground() {
+//     const p = new Promise(function(resolve, reject) { 
+//         setTimeout(() => {
+//             let done = true;
+//             if (done) {
+//                 console.timeLog("going to playground")
+//                 resolve("going to playground")
+//             } else {
+//                 console.log("failed to go to playground")
+//                 reject("failed to go to playground")
+//             }
+//         }, 5000);
+//     })
+//     return p
+// }
+
+
+console.log('first line');
+
+setTimeout(() => {
+    console.log('inside timeout');
+}, 0);
+const p=new Promise((resolve, reject) => {
+    resolve()
 })
 
-const p=new Promise(function(resolve, reject) {
-    setTimeout(() => {
-        let done = true;
-        if (done) {
-            resolve()
-        }else{
-            reject()}
-        }, 5000)
-    })
-    console.log(p)
-
-
-p.then(()=>{console.log("promise fulfiled sucessfully")
-}).catch(()=>{console.log("promise rejected with an error")
+p.then(() => {
+    console.log('inside promise');
+}).catch(() => {
+    console.log('inside catch');
+})
+const p2=new Promise((resolve, reject) => {
+    resolve()
 })
 
+p.then(() => {
+    console.log('inside promise');
+}).catch(() => {
+    console.log('inside catch');
+})
 
-p.then((data)=>{
-    console.log("resolved data:", data)
-}).catch((error)=>{
-    console.log("error:", error)
-}).finally(()=>{console.log  
-("promise is settled (either resolved or rejected)")
-})  
-
-
-function doHomework() {
-    return new Promise(function(resolve, reject) {
-        setTimeout(() => {
-            if(done){
-                console.timeLog("homework completed")
-                resolve("homework completed")
-            }else{
-                reject("homework not completed")
-            }
-        }, 5000);
-    })
-    return p
-}
-
-
-function doHomework() {
-    return new Promise(function(resolve, reject) {
-        setTimeout(() => {
-            if(done){
-                console.timeLog("dinner completed")
-                resolve("dinner completed")
-            }else{
-                reject("dinner not completed")
-            }
-        }, 5000);
-    })
-    return p
-}
-
-
-function goPlayground() {
-    const p = new Promise(function(resolve, reject) { 
-        setTimeout(() => {
-            let done = true;
-            if (done) {
-                console.timeLog("going to playground")
-                resolve("going to playground")
-            } else {
-                console.log("failed to go to playground")
-                reject("failed to go to playground")
-            }
-        }, 5000);
-    })
-    return p
-}
+console.log("last line");
