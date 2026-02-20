@@ -190,28 +190,27 @@
 // }
 
 
-console.log('first line');
+// console.log('first line');
 
-setTimeout(() => {
-    console.log('inside timeout');
-}, 0);
-const p=new Promise((resolve, reject) => {
-    resolve()
-})
+// setTimeout(() => {
+//     console.log('inside timeout');
+// }, 0);
+// const p=new Promise((resolve, reject) => {
+//     resolve()
+// })
 
-p.then(() => {
-    console.log('inside promise');
-}).catch(() => {
-    console.log('inside catch');
-})
-const p2=new Promise((resolve, reject) => {
-    resolve()
-})
+// p.then(() => {
+//     console.log('inside promise');
+// }).catch(() => {
+//     console.log('inside catch');
+// })
+// const p2=new Promise((resolve, reject) => {
+//     resolve()
+// })
 
-p.then(() => {
-    console.log('inside promise');
-}).catch(() => {
-    console.log('inside catch');
-})
-
-console.log("last line");
+// p.then(() => {
+//     console.log('inside promise');
+// }).catch(() => {
+//     console.log('inside catch');
+// })
+// console.log("last line");
